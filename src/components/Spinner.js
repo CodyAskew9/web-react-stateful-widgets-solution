@@ -19,7 +19,7 @@ STEP 0:
 
 STEP 1:
   Create a 'spinnerOn', 'setSpinnerOn' pair of variables using the state hook.
-  The 'spinnerOn' should be initialized to true if you want the spinner to be visible on page load, false otherwise.
+  The 'spinnerOn' slice should be initialized to true so the spinner is visible on page load.
 
 STEP 2:
   This is called a logical expression. If the expressions on both sides of the '&&' are truthy,
@@ -37,22 +37,26 @@ STEP 4:
   Do you remember the operator we use to do "not"?
 */
 
-import React from 'react'; /* STEP 0 */
+import React, { useState } from 'react'; /* STEP 0 */
 
 export default function Spinner() {
-  /* STEP 1 */
+/* STEP 1 */
+  const [spinnerOn, setSpinnerOn] = useState(true);
 
   const toggleSpinner = () => {
-    /* STEP 4 */
+  /* STEP 4 */
+    setSpinnerOn(!spinnerOn);
   };
 
   return (
     <div className='widget-spinner container'>
       <h2>Spinner</h2>
       {
-        true && <div className='spinner'>--+--</div> /* STEP 2 */
+        spinnerOn && <div id='spinner' className='spinner'>--+--</div> /* STEP 2 */
       }
-      <button onClick={toggleSpinner}>Hide Spinner</button> {/* STEP 3 */}
+      <button id='toggleSpinner' onClick={toggleSpinner}>
+        {spinnerOn ? 'Hide' : 'Show'} Spinner {/* STEP 3 */}
+      </button>
     </div>
   );
 }

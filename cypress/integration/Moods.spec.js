@@ -7,16 +7,15 @@ describe('Moods', () => {
   const makeSad = () => cy.get('[id=makeSad]')
   const reset = () => cy.get('[id=resetMood]')
 
-  const not_sure = normalize('Not sure how I feel');
-  const quite_happy = normalize('Quite happy!');
-  const rather_sad = normalize('Rather sad');
+  const not_sure = normalize('Not sure how I feel')
+  const quite_happy = normalize('Quite happy!')
+  const rather_sad = normalize('Rather sad')
 
   beforeEach(() => {
     cy.visit('/')
   })
 
-  describe(`Moods initial state
-    These tests should be passing from the start!`, () => {
+  describe('Moods initial state (These tests should be passing from the start!)', () => {
     it('contains the required elements', () => {
       mood().should('exist')
       makeHappy().should('exist')
