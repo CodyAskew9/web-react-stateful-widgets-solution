@@ -60,14 +60,16 @@ export default function Programmers() {
           )
         }
       </div>
-      {
-        // Ternaries are fantastic to render "one thing or the other" depending on the "truthiness" of something.
-        // Pseudo-code: if the currently featured id is truthy render div 1, otherwise render div 2.
-        // Replace the hard-coded false with the correct variable.
-        featured
-          ? <div style={style}>🎉 Let&apos;s celebrate {getNameOfFeatured()}! 🥳</div>
-          : <div style={style}>Pick an awesome programmer</div>
-      }
+      <div id='featured' style={style}>
+        {
+          // Ternaries are fantastic to render "one thing or the other" depending on the "truthiness" of something.
+          // Pseudo-code: if the currently featured id is truthy render div 1, otherwise render div 2.
+          // Replace the hard-coded false with the correct variable.
+          featured
+            ? `🎉 Let's celebrate ${getNameOfFeatured()}! 🥳`
+            : 'Pick an awesome programmer'
+        }
+      </div>
     </div>
   );
 }
