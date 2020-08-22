@@ -15,7 +15,7 @@ import React, { useState } from 'react';
 
 // Use this variable ONLY to initialize a slice of state!
 // There is something in the JSX right now breaking this rule...
-const listOfAwesome = [
+export const listOfAwesome = [
   { id: '1', name: 'Ada Lovelace' },
   { id: '2', name: 'Grace Hopper' },
   { id: '3', name: 'Evelyn Boyd Granville' },
@@ -63,7 +63,7 @@ export default function Programmers() {
       <div id='featured' style={style}>
         {
           // Ternaries are fantastic to render "one thing or the other" depending on the "truthiness" of something.
-          // Pseudo-code: if the currently featured id is truthy render div 1, otherwise render div 2.
+          // Pseudo-code: if the currently featured id is truthy render text 1, otherwise render text 2.
           // Replace the hard-coded false with the correct variable.
           featured
             ? `🎉 Let's celebrate ${getNameOfFeatured()}! 🥳`
