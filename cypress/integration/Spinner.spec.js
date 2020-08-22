@@ -1,4 +1,3 @@
-import { crimson, royalblue } from '../constants'
 import { normalize } from '../helpers'
 
 describe('Spinner', () => {
@@ -12,7 +11,7 @@ describe('Spinner', () => {
     cy.visit('/')
   })
 
-  describe('Spinner initial state (These tests should be passing from the start!)', () => {
+  describe('Initial state. These tests should already be passing', () => {
     it('contains the required elements', () => {
       spinner().should('exist')
       toggleSpinner().should('exist')
