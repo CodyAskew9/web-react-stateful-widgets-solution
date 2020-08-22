@@ -1,5 +1,4 @@
 import { crimson, royalblue } from '../constants'
-import { normalize } from '../helpers'
 
 describe('Input', () => {
   const input = () => cy.get('[id=input]')
@@ -10,7 +9,7 @@ describe('Input', () => {
     cy.visit('/')
   })
 
-  describe('Initial state. These tests should already be passing'', () => {
+  describe('Initial state. These tests should already be passing', () => {
     it('contains the required elements', () => {
       input().should('exist')
       output().should('exist')
