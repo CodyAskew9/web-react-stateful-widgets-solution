@@ -53,7 +53,7 @@ describe('Squares', () => {
           .should('not.have.class', 'active')
       })
     }
-    it('can activate each square', () => {
+    it('can activate and deactivate each square', () => {
       squares.forEach((_, i) => check(i))
     })
   })
