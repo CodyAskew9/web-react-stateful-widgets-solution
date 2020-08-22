@@ -15,7 +15,7 @@ describe('Moods', () => {
     cy.visit('/')
   })
 
-  describe('Moods initial state (These tests should be passing from the start!)', () => {
+  describe('Initial state. These tests should already be passing', () => {
     it('contains the required elements', () => {
       mood().should('exist')
       makeHappy().should('exist')

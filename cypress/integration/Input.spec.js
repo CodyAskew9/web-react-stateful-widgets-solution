@@ -10,7 +10,7 @@ describe('Input', () => {
     cy.visit('/')
   })
 
-  describe('Input initial state (These tests should be passing from the start!)', () => {
+  describe('Initial state. These tests should already be passing'', () => {
     it('contains the required elements', () => {
       input().should('exist')
       output().should('exist')

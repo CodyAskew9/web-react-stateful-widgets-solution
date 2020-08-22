@@ -16,7 +16,7 @@ describe('Counter', () => {
     cy.visit('/')
   })
 
-  describe('Counter initial state (These tests should be passing from the start!)', () => {
+  describe('Initial state. These tests should already be passing', () => {
     it('contains the required elements', () => {
       count().should('exist')
       decrement().should('exist')
